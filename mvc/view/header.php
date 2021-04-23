@@ -9,12 +9,11 @@
         <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" />
         <link rel="stylesheet" href="assets/js/jquery-ui/jquery-ui.min.css" />
         <link rel="stylesheet" href="assets/css/style.css" />
-
-        
         <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
 	</head>
     <body>
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-inverse">
           <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -35,7 +34,7 @@
                   <ul class="dropdown-menu">
                     <li><a href="index.php">Alumnos</a></li>
                     <li><a href="index_1.php">Profesores</a></li>
-                    <li><a href="#">Cursos</a></li>
+                    <li><a href="index_2.php">Cursos</a></li>
                   </ul>
                 </li>
               </ul>
