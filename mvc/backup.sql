@@ -35,15 +35,6 @@ CREATE TABLE `alumno_curso` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `alumno_curso`
---
-
-LOCK TABLES `alumno_curso` WRITE;
-/*!40000 ALTER TABLE `alumno_curso` DISABLE KEYS */;
-/*!40000 ALTER TABLE `alumno_curso` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `alumnos`
 --
 
@@ -59,17 +50,8 @@ CREATE TABLE `alumnos` (
   `FechaRegistro` varchar(20) DEFAULT NULL,
   `Correo` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `alumnos`
---
-
-LOCK TABLES `alumnos` WRITE;
-/*!40000 ALTER TABLE `alumnos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `alumnos` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `cursos`
@@ -81,21 +63,13 @@ DROP TABLE IF EXISTS `cursos`;
 CREATE TABLE `cursos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(500) COLLATE utf8_spanish_ci NOT NULL DEFAULT '0',
-  `idProfesor` int(11) NOT NULL,
-  PRIMARY KEY (`id`,`idProfesor`),
-  KEY `idProfesor` (`idProfesor`),
+  `idProfesor` int(11) DEFAULT NULL,
+  `FechaRegistro` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cursos_ibfk_1` (`idProfesor`),
   CONSTRAINT `cursos_ibfk_1` FOREIGN KEY (`idProfesor`) REFERENCES `profesores` (`idProfesor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cursos`
---
-
-LOCK TABLES `cursos` WRITE;
-/*!40000 ALTER TABLE `cursos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cursos` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `profesores`
@@ -105,7 +79,7 @@ DROP TABLE IF EXISTS `profesores`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `profesores` (
-  `idProfesor` int(11) NOT NULL,
+  `idProfesor` int(11) NOT NULL AUTO_INCREMENT,
   `Nombre` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `Apellido` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `Sexo` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
@@ -113,17 +87,8 @@ CREATE TABLE `profesores` (
   `FechaRegistro` varchar(20) COLLATE utf8_spanish_ci DEFAULT NULL,
   `Correo` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`idProfesor`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `profesores`
---
-
-LOCK TABLES `profesores` WRITE;
-/*!40000 ALTER TABLE `profesores` DISABLE KEYS */;
-/*!40000 ALTER TABLE `profesores` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Dumping events for database 'colegio'
@@ -142,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-04-20 15:26:34
+-- Dump completed on 2021-04-23  1:25:37
