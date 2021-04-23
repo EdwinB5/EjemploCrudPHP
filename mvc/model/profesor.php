@@ -102,7 +102,7 @@ class Profesor
 	{
 		try
 		{
-			$sql = "INSERT INTO profesores (Nombre,Apellido,Sexo,FechaNacimiento,Correo,FechaRegistro)
+			$sql = "INSERT INTO profesores (Nombre,Correo,Apellido,Sexo,FechaNacimiento,FechaRegistro)
 					VALUES(?, ?, ?, ?, ?, ?)";
 
 			$this->pdo->prepare($sql)
@@ -113,7 +113,6 @@ class Profesor
 						$data->Apellido,
 						$data->Sexo,
 						$data->FechaNacimiento,
-						$data->Correo,
 						date('Y-m-d')
 					)
 				);
