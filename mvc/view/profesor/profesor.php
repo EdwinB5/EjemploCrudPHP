@@ -1,7 +1,7 @@
 <h1 class="page-header">Profesores</h1>
 
 <div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=Profesor&a=Crud">Nuevo profesor</a>
+    <a class="btn btn-danger" href="?c=Profesor&a=Crud">Nuevo profesor</a>
 </div>
 
 <table class="table table-striped">

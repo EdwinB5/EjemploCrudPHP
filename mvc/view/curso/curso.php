@@ -1,7 +1,7 @@
 <h1 class="page-header">Cursos</h1>
 
 <div class="well well-sm text-right">
-    <a class="btn btn-primary" href="?c=Curso&a=Crud">Nuevo curso</a>
+    <a class="btn btn-danger" href="?c=Curso&a=Crud">Nuevo curso</a>
 </div>
 
 <table class="table table-striped">
