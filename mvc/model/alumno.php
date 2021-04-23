@@ -87,8 +87,8 @@ class Alumno
 			     ->execute(
 				    array(
                         $data->Nombre, 
-                        $data->Correo,
                         $data->Apellido,
+                        $data->Correo,
                         $data->Sexo,
                         $data->FechaNacimiento,
                         $data->id
